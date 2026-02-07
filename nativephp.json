@@ -1,0 +1,112 @@
+{
+    "name": "fzlxtech/plugin-mobile-nfc",
+    "version": "1.0.0",
+    "description": "A NativePHP Mobile plugin",
+    "namespace": "MobileNfc",
+    "keywords": [],
+    "category": "utilities",
+    "license": "MIT",
+    "pricing": {
+        "type": "free"
+    },
+    "author": {
+        "name": "Your Name",
+        "email": "you@example.com",
+        "url": ""
+    },
+    "homepage": "",
+    "repository": "",
+    "funding": [],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "icon": "resources/icon.png",
+    "screenshots": [],
+    "bridge_functions": [
+        {
+            "name": "MobileNfc.Execute",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.Execute",
+            "ios": "MobileNfcFunctions.Execute",
+            "description": "Execute the plugin functionality"
+        },
+        {
+            "name": "MobileNfc.GetStatus",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.GetStatus",
+            "ios": "MobileNfcFunctions.GetStatus",
+            "description": "Get the current status"
+        },
+        {
+            "name": "MobileNfc.Status",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.Status",
+            "ios": "MobileNfcFunctions.Status",
+            "description": "Get NFC status (supported/enabled)"
+        },
+        {
+            "name": "MobileNfc.IsSupported",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.IsSupported",
+            "ios": "MobileNfcFunctions.IsSupported",
+            "description": "Check if NFC is supported"
+        },
+        {
+            "name": "MobileNfc.IsEnabled",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.IsEnabled",
+            "ios": "MobileNfcFunctions.IsEnabled",
+            "description": "Check if NFC is enabled"
+        },
+        {
+            "name": "MobileNfc.ReadNdef",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.ReadNdef",
+            "ios": "MobileNfcFunctions.ReadNdef",
+            "description": "Read NDEF from current NFC tag intent/session"
+        },
+        {
+            "name": "MobileNfc.WriteNdef",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.WriteNdef",
+            "ios": "MobileNfcFunctions.WriteNdef",
+            "description": "Write base64 NDEF message to NFC tag"
+        },
+        {
+            "name": "MobileNfc.Transceive",
+            "android": "com.fzlxtech.plugins.mobile_nfc.MobileNfcFunctions.Transceive",
+            "ios": "MobileNfcFunctions.Transceive",
+            "description": "Send a raw command and get response"
+        }
+    ],
+    "android": {
+        "permissions": [
+            "android.permission.NFC"
+        ],
+        "repositories": [],
+        "dependencies": {
+            "implementation": []
+        },
+        "activities": [],
+        "services": [],
+        "receivers": [],
+        "providers": []
+    },
+    "ios": {
+        "permissions": [],
+        "repositories": [],
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        },
+        "info_plist": {
+            "NFCReaderUsageDescription": "This app uses NFC to read and write tags."
+        }
+    },
+    "assets": {
+        "android": [],
+        "ios": []
+    },
+    "secrets": [],
+    "events": [
+        "Fzlxtech\\MobileNfc\\Events\\MobileNfcCompleted"
+    ],
+    "service_provider": "Fzlxtech\\MobileNfc\\MobileNfcServiceProvider",
+    "hooks": {
+        "copy_assets": "nativephp:mobile-nfc:copy-assets"
+    }
+}
